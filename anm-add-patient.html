@@ -97,7 +97,7 @@
             <input type="text" name="mothers_name" id="mothers_name" value="" class="form_input required" />
             <label>Date :</label>
             <input type="date" name="patient_dt" id="patient_dt" value="" class="form_input required" />
-            <label><u>Pregnancy Details :-</u></label>
+            <label><u><strong>Pregnancy Details :-</strong></u></label>
             <label>Gravida :</label>
             <div class="form_row">
               <select name="preg_gravida" id="preg_gravida" class="form_select">
@@ -182,22 +182,25 @@
               <label>Prolonged Labour :</label>
               <input type="radio" name="prolonged" value="prolonged" checked> Yes
               <input type="radio" name="prolonged" value="prolonged">No<br> 
-            </div>
+            </div><br>
+            <hr>
             <div class="form_row">
               <label>Evacuated to Referral Hospital :</label>
               <input type="radio" name="evacuated" value="evacuated" checked> Yes
               <input type="radio" name="evacuated" value="evacuated">No<br>  
             </div>
-            <label>Yes When Evacuated :</label>
+            <label><i>IF Yes When Evacuated :</i></label>
             <div class="form_row">
               <select name="if_yes_evacuated" id="if_yes_evacuated" class="form_select">
                 <option value="">--Select--</option>
+                <option value="none">None</option>
                 <option value="10-20 Hrs">10-20 Hrs</option>
                 <option value="20-24 Hrs">20-24 Hrs</option>
                 <option value="24-48 Hrs">24-48 Hrs</option>
                 <option value="48 Hrs">> 48 Hrs</option>
               </select>
-            </div>
+            </div><br>
+            <hr><br>
             <label>No. of Moves :</label>
             <div class="form_row">
               <select name="no_of_moves" id="no_of_moves" class="form_select">
@@ -213,7 +216,8 @@
               &nbsp;&nbsp;&nbsp;&nbsp;1 -> Home -Hospital<br>
               &nbsp;&nbsp;&nbsp;&nbsp;2 -> Home  PHC/CHC - DHH/Hospital<br>&nbsp;&nbsp;&nbsp;&nbsp;3 -> Home - SC /PHC -CHC - hospital<br>
               &nbsp;&nbsp;&nbsp;&nbsp;4 -> More than 3-Home-SC/PHC-  CHC-DHH-hospital
-            </div>
+            </div><br>
+            <hr>
             <label>Place of Delivery :</label>
             <div class="form_row">
               <select name="place_of_delivery" id="place_of_delivery" class="form_select">
@@ -221,10 +225,12 @@
                 <option value="Home">Home</option>
                 <option value="Institution">Institution</option>
               </select><br>
-			  <label>If Institution</label>
+			  <label><i>If Institution</i></label>
               <input type="radio" name="if_institution" id="if_institution_g" value="Govt.">Govt.
-              <input type="radio" name="if_institution" id="if_institution_p" value="Private">Private<br>
-            </div>
+              <input type="radio" name="if_institution" id="if_institution_p" value="Private">Private
+              <input type="radio" name="if_institution" id="if_institution_p" value="Private">None<br>
+            </div><br>
+            <hr><br>
             <label>Type of Delivery :</label>
             <div class="form_row">
               <select name="type_of_delivery" id="type_of_delivery" class="form_select">
@@ -264,21 +270,23 @@
               <label>Psychological Impaired :</label>
               <input type="radio" name="psychological" value="psychological" checked> Yes
               <input type="radio" name="psychological" value="psychological">No<br> 
-            </div>
+            </div><br>
+            <hr>
             <div class="form_row">
               <label>Maternal Morbidity :</label>
               <input type="radio" name="maternal" value="maternal" checked> Yes
               <input type="radio" name="maternal" value="maternal">No<br>
             </div>
             <div class="form_row"> 
-              <label>Yes - What Problem:</label>
+              <label><i>IF Yes - What Problem :</i></label>
                 <textarea name="if_yes_problem" id="if_yes_problem" class="form_textarea" rows="" cols=""></textarea>
-              </div>
+              </div><br>
+              <hr><br>
             <div class="form_row">
               <label>Maternal Death :</label>
               <input type="radio" name="mater" value="mater" checked> Yes
               <input type="radio" name="mater" value="mater">No<br>
-            </div>
+            </div><br>
             <input type="button" name="submit" class="form_submit" id="submit22" value="Submit" onClick="submit_data()" />
             <!--<input class="" type="hidden" name="to"  value="youremail@yourwebsite.com" />
             <input class="" type="hidden" name="subject" value="Contacf form message" />-->
