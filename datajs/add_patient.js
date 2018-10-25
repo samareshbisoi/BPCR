@@ -1,20 +1,20 @@
 
 function open_divA() {
 	
-	if(document.getElementById('evacuated_yes').checked) {
+	if(document.getElementById('evacuated_yes').checked == true) {
 			  // radio button is checked
 			 document.getElementById('label_evacuated_if_yes').style.visibility = "visible";
-			  document.getElementById('frmDiv_evacuated_if_yes').style.visibility = "visible";
+			  //document.getElementById('frmDiv_evacuated_if_yes').style.visibility = "visible";
 			} else {
 				 document.getElementById('label_evacuated_if_yes').style.visibility = "hidden";
-			  document.getElementById('frmDiv_evacuated_if_yes').style.visibility = "hidden";
+			 // document.getElementById('frmDiv_evacuated_if_yes').style.visibility = "hidden";
 			}
 	
 }
 
 function open_divMM() {
 	
-	if(document.getElementById('metarnal_morbidity_yes').checked) {
+	if(document.getElementById('metarnal_morbidity_yes').checked == true) {
 			  // radio button is checked
 			 document.getElementById('metarnal_morbidity_if_yes').style.visibility = "visible";
 			} else {
