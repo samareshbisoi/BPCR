@@ -97,7 +97,7 @@
             <input type="text" name="mothers_name" id="mothers_name" value="" class="form_input required" />
             <label>Date :</label>
             <input type="date" name="patient_dt" id="patient_dt" value="" class="form_input required" />
-            <label><u><strong>Pregnancy Details :-</strong></u></label>
+            <label><u>Pregnancy Details :-</u></label>
             <label>Gravida :</label>
             <div class="form_row">
               <select name="preg_gravida" id="preg_gravida" class="form_select">
@@ -180,27 +180,54 @@
             </div>
             <div class="form_row">
               <label>Prolonged Labour :</label>
-              <input type="radio" name="prolonged" value="prolonged" checked> Yes
-              <input type="radio" name="prolonged" value="prolonged">No<br> 
-            </div><br>
-            <hr>
+              <div class="form_row_right">
+                <label class="label-radio item-content">
+                  <!-- Checked by default -->
+                  <input type="radio" name="prolonged_labour" id="prolonged_labour_yes" value="yes" checked="checked">
+                  <div class="item-inner">
+                    <div class="item-title">Yes</div>
+                  </div>
+                </label>
+                          
+                <label class="label-radio item-content">
+                  <!-- Checked by default -->
+                  <input type="radio" name="prolonged_labour" id="prolonged_labour_no" value="no">
+                  <div class="item-inner">
+                    <div class="item-title">No</div>
+                  </div>
+                </label>
+              </div> 
+            </div>
             <div class="form_row">
               <label>Evacuated to Referral Hospital :</label>
-              <input type="radio" name="evacuated" value="evacuated" checked> Yes
-              <input type="radio" name="evacuated" value="evacuated">No<br>  
+              <div class="form_row_right">
+                <label class="label-radio item-content">
+                  <!-- Checked by default -->
+                  <input type="radio"  value="yes" onClick="open_divA()"  name="evacuated" id="evacuated_yes">
+                  <div class="item-inner">
+                    <div class="item-title">Yes</div>
+                  </div>
+                </label>
+                          
+                <label class="label-radio item-content">
+                  <!-- Checked by default -->
+                  <input type="radio"  value="no" onClick="open_divA()" checked="checked" name="evacuated" id="evacuated_no">
+                  <div class="item-inner">
+                    <div class="item-title">No</div>
+                  </div>
+                </label>
+              </div> 
             </div>
-            <label><i>IF Yes When Evacuated :</i></label>
-            <div class="form_row">
+            <label id="label_evacuated_if_yes" style="visibility:hidden;">Yes When Evacuated :</label>
+            <div class="form_row" id="frmDiv_evacuated_if_yes" style="visibility:hidden;">
               <select name="if_yes_evacuated" id="if_yes_evacuated" class="form_select">
                 <option value="">--Select--</option>
-                <option value="none">None</option>
                 <option value="10-20 Hrs">10-20 Hrs</option>
                 <option value="20-24 Hrs">20-24 Hrs</option>
                 <option value="24-48 Hrs">24-48 Hrs</option>
                 <option value="48 Hrs">> 48 Hrs</option>
               </select>
-            </div><br>
-            <hr><br>
+            </div>
             <label>No. of Moves :</label>
             <div class="form_row">
               <select name="no_of_moves" id="no_of_moves" class="form_select">
@@ -216,21 +243,20 @@
               &nbsp;&nbsp;&nbsp;&nbsp;1 -> Home -Hospital<br>
               &nbsp;&nbsp;&nbsp;&nbsp;2 -> Home  PHC/CHC - DHH/Hospital<br>&nbsp;&nbsp;&nbsp;&nbsp;3 -> Home - SC /PHC -CHC - hospital<br>
               &nbsp;&nbsp;&nbsp;&nbsp;4 -> More than 3-Home-SC/PHC-  CHC-DHH-hospital
-            </div><br>
-            <hr>
+            </div>
             <label>Place of Delivery :</label>
             <div class="form_row">
-              <select name="place_of_delivery" id="place_of_delivery" class="form_select">
+              <select name="place_of_delivery" id="place_of_delivery" class="form_select" onChange="openTB(this.value)">
                 <option value="">--Select--</option>
                 <option value="Home">Home</option>
                 <option value="Institution">Institution</option>
               </select><br>
-			  <label><i>If Institution</i></label>
-              <input type="radio" name="if_institution" id="if_institution_g" value="Govt.">Govt.
-              <input type="radio" name="if_institution" id="if_institution_p" value="Private">Private
-              <input type="radio" name="if_institution" id="if_institution_p" value="Private">None<br>
-            </div><br>
-            <hr><br>
+			  <div id="frmDiv_place_if_yes" style="visibility:hidden;">
+				  <label>If Institution</label>
+				  <input type="radio" name="if_institution" id="if_institution_g" value="Govt.">Govt.
+				  <input type="radio" name="if_institution" id="if_institution_p" value="Private">Private<br>
+			  </div>
+            </div>
             <label>Type of Delivery :</label>
             <div class="form_row">
               <select name="type_of_delivery" id="type_of_delivery" class="form_select">
@@ -258,35 +284,108 @@
             </div>
             <div class="form_row">
               <label>Fistula Cases Identified :</label>
-              <input type="radio" name="fistula" value="fistula" checked> Yes
-              <input type="radio" name="fistula" value="fistula">No<br>
+              <div class="form_row_right">
+                <label class="label-radio item-content">
+                  <!-- Checked by default -->
+                  <input type="radio" name="fistula_cases_identified" id="fistula_cases_identified_yes" value="yes" checked="checked">
+                  <div class="item-inner">
+                    <div class="item-title">Yes</div>
+                  </div>
+                </label>
+                          
+                <label class="label-radio item-content">
+                  <!-- Checked by default -->
+                  <input type="radio" name="fistula_cases_identified" id="fistula_cases_identified_no" value="no">
+                  <div class="item-inner">
+                    <div class="item-title">No</div>
+                  </div>
+                </label>
+              </div> 
             </div>
             <div class="form_row">
               <label>Fistula Cases Referred :</label>
-              <input type="radio" name="cases" value="cases" checked> Yes
-              <input type="radio" name="cases" value="cases">No<br>  
+              <div class="form_row_right">
+                <label class="label-radio item-content">
+                  <!-- Checked by default -->
+                  <input type="radio" name="fistula_case_reffered" id="fistula_case_reffered_yes" value="yes" checked="checked">
+                  <div class="item-inner">
+                    <div class="item-title">Yes</div>
+                  </div>
+                </label>
+                          
+                <label class="label-radio item-content">
+                  <!-- Checked by default -->
+                  <input type="radio" name="fistula_case_reffered" id="fistula_case_reffered_no" value="no">
+                  <div class="item-inner">
+                    <div class="item-title">No</div>
+                  </div>
+                </label>
+              </div> 
             </div>
             <div class="form_row">
               <label>Psychological Impaired :</label>
-              <input type="radio" name="psychological" value="psychological" checked> Yes
-              <input type="radio" name="psychological" value="psychological">No<br> 
-            </div><br>
-            <hr>
+              <div class="form_row_right">
+                <label class="label-radio item-content">
+                  <!-- Checked by default -->
+                  <input type="radio" name="psychological" id="psychological_yes" value="yes" checked="checked">
+                  <div class="item-inner">
+                    <div class="item-title">Yes</div>
+                  </div>
+                </label>
+                          
+                <label class="label-radio item-content">
+                  <!-- Checked by default -->
+                  <input type="radio" name="psychological" id="psychological_no" value="no">
+                  <div class="item-inner">
+                    <div class="item-title">No</div>
+                  </div>
+                </label>
+              </div> 
+            </div>
             <div class="form_row">
               <label>Maternal Morbidity :</label>
-              <input type="radio" name="maternal" value="maternal" checked> Yes
-              <input type="radio" name="maternal" value="maternal">No<br>
+              <div class="form_row_right">
+                <label class="label-radio item-content">
+                  <!-- Checked by default -->
+                  <input type="radio" name="metarnal_morbidity" onClick="open_divMM()" id="metarnal_morbidity_yes" value="yes" checked="checked">
+                  <div class="item-inner">
+                    <div class="item-title">Yes</div>
+                  </div>
+                </label>
+                          
+                <label class="label-radio item-content">
+                  <!-- Checked by default -->
+                  <input type="radio" name="metarnal_morbidity" onClick="open_divMM()" id="metarnal_morbidity_no" value="no">
+                  <div class="item-inner">
+                    <div class="item-title">No</div>
+                  </div>
+                </label>
+              </div> 
             </div>
-            <div class="form_row"> 
-              <label><i>IF Yes - What Problem :</i></label>
+            <div class="form_row" id="metarnal_morbidity_if_yes" style="visibility:visible;"> 
+              <label>Yes - What Problem:</label>
                 <textarea name="if_yes_problem" id="if_yes_problem" class="form_textarea" rows="" cols=""></textarea>
-              </div><br>
-              <hr><br>
+              </div>
             <div class="form_row">
               <label>Maternal Death :</label>
-              <input type="radio" name="mater" value="mater" checked> Yes
-              <input type="radio" name="mater" value="mater">No<br>
-            </div><br>
+              <div class="form_row_right">
+                <label class="label-radio item-content">
+                  <!-- Checked by default -->
+                  <input type="radio" name="metarnal_death" id="metarnal_death_yes" value="yes" checked="checked">
+                  <div class="item-inner">
+                    <div class="item-title">Yes</div>
+                  </div>
+                </label>
+                          
+                <label class="label-radio item-content">
+                  <!-- Checked by default -->
+                  <input type="radio" name="metarnal_death" id="metarnal_death_no" value="no">
+                  <div class="item-inner">
+                    <div class="item-title">No</div>
+                  </div>
+                </label>
+              </div> 
+            </div>
             <input type="button" name="submit" class="form_submit" id="submit22" value="Submit" onClick="submit_data()" />
             <!--<input class="" type="hidden" name="to"  value="youremail@yourwebsite.com" />
             <input class="" type="hidden" name="subject" value="Contacf form message" />-->
@@ -351,11 +450,11 @@
         <div class="toolbar">
               <div class="toolbar-inner">
               <ul class="toolbar_icons">
-              <li class="navbg1"><a href="odia-contact.html" data-panel="right" class="navbgtransblue"><img src="images/icons/white/contact.png" alt="" title="" /></a></li>
-              <li><a href="odia-anm-login.html"><img src="images/icons/white/login.png" alt="" title="" /></a></li>
-              <li class="menuicon"><a href="index.html"><img src="images/icons/red/home.png" alt="" title="" /></a></li>
+              <li class="navbg1"><a href="index.html" data-panel="right" class="navbgtransblue"><img src="images/icons/white/home.png" alt="" title="" /></a></li>
+              <li><a href="action-plan-on-identification-of-obstetric-fistula.html"><img src="images/icons/white/login.png" alt="" title="" /></a></li>
+              <li class="menuicon"><a href="contact.html"><img src="images/icons/red/contact.png" alt="" title="" /></a></li>
               <li><a href="#" data-popup=".popup-social" class="open-popup"><img src="images/icons/white/facebook.png" alt="" title="" /></a></li>
-              <li><a href="tel:8249 262 386" class="external"><img src="images/icons/white/phone.png" alt="" title="" /></a></li>
+              <li><a href="tel:7870 704 868" class="external"><img src="images/icons/white/phone.png" alt="" title="" /></a></li>
               </ul>
               </div>  
         </div>
