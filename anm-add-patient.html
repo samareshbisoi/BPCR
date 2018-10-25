@@ -203,7 +203,7 @@
               <div class="form_row_right">
                 <label class="label-radio item-content">
                   <!-- Checked by default -->
-                  <input type="radio"  value="yes" onClick="open_divA()"  name="evacuated" id="evacuated_yes">
+                  <input type="radio"  value="yes" onClick="open_divA()" checked="checked"  name="evacuated" id="evacuated_yes">
                   <div class="item-inner">
                     <div class="item-title">Yes</div>
                   </div>
@@ -211,23 +211,25 @@
                           
                 <label class="label-radio item-content">
                   <!-- Checked by default -->
-                  <input type="radio"  value="no" onClick="open_divA()" checked="checked" name="evacuated" id="evacuated_no">
+                  <input type="radio"  value="no" onClick="open_divA()"  name="evacuated" id="evacuated_no">
                   <div class="item-inner">
                     <div class="item-title">No</div>
                   </div>
                 </label>
               </div> 
             </div>
-            <label id="label_evacuated_if_yes" style="visibility:hidden;">Yes When Evacuated :</label>
-            <div class="form_row" id="frmDiv_evacuated_if_yes" style="visibility:hidden;">
-              <select name="if_yes_evacuated" id="if_yes_evacuated" class="form_select">
-                <option value="">--Select--</option>
-                <option value="10-20 Hrs">10-20 Hrs</option>
-                <option value="20-24 Hrs">20-24 Hrs</option>
-                <option value="24-48 Hrs">24-48 Hrs</option>
-                <option value="48 Hrs">> 48 Hrs</option>
-              </select>
-            </div>
+			<div id="label_evacuated_if_yes" style="visibility:visible;">
+				<label  >Yes When Evacuated :</label>
+				<div class="form_row" >
+				  <select name="if_yes_evacuated" id="if_yes_evacuated" class="form_select">
+					<option value="">--Select--</option>
+					<option value="10-20 Hrs">10-20 Hrs</option>
+					<option value="20-24 Hrs">20-24 Hrs</option>
+					<option value="24-48 Hrs">24-48 Hrs</option>
+					<option value="48 Hrs">> 48 Hrs</option>
+				  </select>
+				</div>
+			</div>
             <label>No. of Moves :</label>
             <div class="form_row">
               <select name="no_of_moves" id="no_of_moves" class="form_select">
@@ -450,11 +452,11 @@
         <div class="toolbar">
               <div class="toolbar-inner">
               <ul class="toolbar_icons">
-              <li class="navbg1"><a href="english-contact.html" data-panel="right" class="navbgtransblue"><img src="images/icons/white/contact.png" alt="" title="" /></a></li>
-              <li><a href="english-anm-login.html"><img src="images/icons/white/login.png" alt="" title="" /></a></li>
-              <li class="menuicon"><a href="index.html"><img src="images/icons/red/home.png" alt="" title="" /></a></li>
+              <li class="navbg1"><a href="index.html" data-panel="right" class="navbgtransblue"><img src="images/icons/white/home.png" alt="" title="" /></a></li>
+              <li><a href="action-plan-on-identification-of-obstetric-fistula.html"><img src="images/icons/white/login.png" alt="" title="" /></a></li>
+              <li class="menuicon"><a href="contact.html"><img src="images/icons/red/contact.png" alt="" title="" /></a></li>
               <li><a href="#" data-popup=".popup-social" class="open-popup"><img src="images/icons/white/facebook.png" alt="" title="" /></a></li>
-              <li><a href="tel:8249 262 386" class="external"><img src="images/icons/white/phone.png" alt="" title="" /></a></li>
+              <li><a href="tel:7870 704 868" class="external"><img src="images/icons/white/phone.png" alt="" title="" /></a></li>
               </ul>
               </div>  
         </div>
