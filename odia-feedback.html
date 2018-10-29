@@ -82,29 +82,44 @@
     </a>  </div>
      
      <div id="pages_maincontent">
-      <h2 class="page_title">Feedback</h2>
+      <h2 class="page_title">Give Your Feedback</h2>
       
        
     
     <div class="page_single layout_fullwidth_padding toolbarpage">  
     
     
-
-    <img src="images/sa.jpg"width="100%"><br><br>
-
-<img src="images/12345.jpg"width="100%"><br><br>
-
-
-		<div class="contactform">
-            <form class="cmxform" id="ContactForm" method="post" action="">
-            	<label>?</label>
-            	<input type="radio" name="gender" value="male" checked> 1<br>
-  				<input type="radio" name="gender" value="female"> 2<br>
-  				<input type="radio" name="gender" value="other"> 3<br>
-  				<input type="radio" name="gender" value="other"> 4<br>
-  				<input type="radio" name="gender" value="other"> 5<br>
+          <div class="contactform">
+            <label>Name :</label>
+            <input type="text" name="ContactName" id="ContactName" value="" class="form_input required" />
+            <label>Phone No :</label>
+            <input type="tel" name="usrtel" id="phone" value="" class="form_input required phone" />
+            <label>Your Identity :</label>
+            <div class="form_row">
+              <select name="" class="form_select" id="identity">
+                <option value="">--Select--</option>
+                <option value="Health Worker">Health Worker</option>
+                <option value="Patient">Patient</option>
+                <option value="Individual">Individual</option>
+              </select>
+            </div>
+            <label>Feedback :</label>
+            <div class="form_row">
+              <select name="" class="form_select" id="identity">
+                <option value="">--Select--</option>
+                <option value="Health Worker">Satisfied</option>
+                <option value="Patient">Not Satisfied</option>
+                <option value="Individual">Average</option>
+                <option value="Individual">Good</option>
+                <option value="Individual">Bad</option>
+              </select>
+            </div>
+            <input type="button" name="submit" class="form_submit" id="submit" value="Submit" onClick="submit_data()" />
+            <input class="" type="hidden" name="to"  value="youremail@yourwebsite.com" />
+            <input class="" type="hidden" name="subject" value="Contacf form message" />
+            <label id="loader" style="display:none;"><img src="images/loader.gif" alt="Loading..." id="LoadingGraphic" /></label>
             </form>
-        </div>
+          </div> 
 
         <a href="anm-dashboard.html" class="button_full">Back</a>  
           
