@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="in.pocketapp.bpcr" version="3.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>BPCR</name>
+<widget id="in.pocketapp.mlcc" version="3.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>MLCC</name>
     <description>Official App of Birth Preparedness and Complication Readiness.</description>
     <author email="support@pocketapp.in" href="http://pocketapp.in">
      PocketApp.in
