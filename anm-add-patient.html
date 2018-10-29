@@ -180,43 +180,13 @@
             </div>
             <div class="form_row">
               <label>Prolonged Labour :</label>
-              <div class="form_row_right">
-                <label class="label-radio item-content">
-                  <!-- Checked by default -->
-                  <input type="radio" name="prolonged_labour" id="prolonged_labour_yes" value="yes" checked="checked">
-                  <div class="item-inner">
-                    <div class="item-title">Yes</div>
-                  </div>
-                </label>
-                          
-                <label class="label-radio item-content">
-                  <!-- Checked by default -->
-                  <input type="radio" name="prolonged_labour" id="prolonged_labour_no" value="no">
-                  <div class="item-inner">
-                    <div class="item-title">No</div>
-                  </div>
-                </label>
-              </div> 
+              <input type="radio" name="prolonged" value="male" checked> Yes<br>
+              <input type="radio" name="prolonged" value="female"> No 
             </div>
             <div class="form_row">
               <label>Evacuated to Referral Hospital :</label>
-              <div class="form_row_right">
-                <label class="label-radio item-content">
-                  <!-- Checked by default -->
-                  <input type="radio"  value="yes" onClick="open_divA()" checked="checked"  name="evacuated" id="evacuated_yes">
-                  <div class="item-inner">
-                    <div class="item-title">Yes</div>
-                  </div>
-                </label>
-                          
-                <label class="label-radio item-content">
-                  <!-- Checked by default -->
-                  <input type="radio"  value="no" onClick="open_divA()"  name="evacuated" id="evacuated_no">
-                  <div class="item-inner">
-                    <div class="item-title">No</div>
-                  </div>
-                </label>
-              </div> 
+              <input type="radio" name="evacuated" value="male" checked> Yes<br>
+              <input type="radio" name="evacuated" value="female"> No
             </div>
 			<div id="label_evacuated_if_yes" style="visibility:visible;">
 				<label  >Yes When Evacuated :</label>
@@ -286,83 +256,23 @@
             </div>
             <div class="form_row">
               <label>Fistula Cases Identified :</label>
-              <div class="form_row_right">
-                <label class="label-radio item-content">
-                  <!-- Checked by default -->
-                  <input type="radio" name="fistula_cases_identified" id="fistula_cases_identified_yes" value="yes" checked="checked">
-                  <div class="item-inner">
-                    <div class="item-title">Yes</div>
-                  </div>
-                </label>
-                          
-                <label class="label-radio item-content">
-                  <!-- Checked by default -->
-                  <input type="radio" name="fistula_cases_identified" id="fistula_cases_identified_no" value="no">
-                  <div class="item-inner">
-                    <div class="item-title">No</div>
-                  </div>
-                </label>
-              </div> 
+              <input type="radio" name="istula" value="male" checked> Yes<br>
+              <input type="radio" name="istula" value="female"> No 
             </div>
             <div class="form_row">
               <label>Fistula Cases Referred :</label>
-              <div class="form_row_right">
-                <label class="label-radio item-content">
-                  <!-- Checked by default -->
-                  <input type="radio" name="fistula_case_reffered" id="fistula_case_reffered_yes" value="yes" checked="checked">
-                  <div class="item-inner">
-                    <div class="item-title">Yes</div>
-                  </div>
-                </label>
-                          
-                <label class="label-radio item-content">
-                  <!-- Checked by default -->
-                  <input type="radio" name="fistula_case_reffered" id="fistula_case_reffered_no" value="no">
-                  <div class="item-inner">
-                    <div class="item-title">No</div>
-                  </div>
-                </label>
-              </div> 
+              <input type="radio" name="ases" value="male" checked> Yes<br>
+              <input type="radio" name="ases" value="female"> No
             </div>
             <div class="form_row">
               <label>Psychological Impaired :</label>
-              <div class="form_row_right">
-                <label class="label-radio item-content">
-                  <!-- Checked by default -->
-                  <input type="radio" name="psychological" id="psychological_yes" value="yes" checked="checked">
-                  <div class="item-inner">
-                    <div class="item-title">Yes</div>
-                  </div>
-                </label>
-                          
-                <label class="label-radio item-content">
-                  <!-- Checked by default -->
-                  <input type="radio" name="psychological" id="psychological_no" value="no">
-                  <div class="item-inner">
-                    <div class="item-title">No</div>
-                  </div>
-                </label>
-              </div> 
+              <input type="radio" name="sychological" value="male" checked> Yes<br>
+              <input type="radio" name="sychological" value="female"> No 
             </div>
             <div class="form_row">
               <label>Maternal Morbidity :</label>
-              <div class="form_row_right">
-                <label class="label-radio item-content">
-                  <!-- Checked by default -->
-                  <input type="radio" name="metarnal_morbidity" onClick="open_divMM()" id="metarnal_morbidity_yes" value="yes" checked="checked">
-                  <div class="item-inner">
-                    <div class="item-title">Yes</div>
-                  </div>
-                </label>
-                          
-                <label class="label-radio item-content">
-                  <!-- Checked by default -->
-                  <input type="radio" name="metarnal_morbidity" onClick="open_divMM()" id="metarnal_morbidity_no" value="no">
-                  <div class="item-inner">
-                    <div class="item-title">No</div>
-                  </div>
-                </label>
-              </div> 
+              <input type="radio" name="aternal" value="male" checked> Yes<br>
+              <input type="radio" name="aternal" value="female"> No 
             </div>
             <div class="form_row" id="metarnal_morbidity_if_yes" style="visibility:visible;"> 
               <label>Yes - What Problem:</label>
@@ -370,23 +280,8 @@
               </div>
             <div class="form_row">
               <label>Maternal Death :</label>
-              <div class="form_row_right">
-                <label class="label-radio item-content">
-                  <!-- Checked by default -->
-                  <input type="radio" name="metarnal_death" id="metarnal_death_yes" value="yes" checked="checked">
-                  <div class="item-inner">
-                    <div class="item-title">Yes</div>
-                  </div>
-                </label>
-                          
-                <label class="label-radio item-content">
-                  <!-- Checked by default -->
-                  <input type="radio" name="metarnal_death" id="metarnal_death_no" value="no">
-                  <div class="item-inner">
-                    <div class="item-title">No</div>
-                  </div>
-                </label>
-              </div> 
+              <input type="radio" name="maternal" value="male" checked> Yes<br>
+              <input type="radio" name="maternal" value="female"> No 
             </div>
             <input type="button" name="submit" class="form_submit" id="submit22" value="Submit" onClick="submit_data()" />
             <!--<input class="" type="hidden" name="to"  value="youremail@yourwebsite.com" />
