@@ -67,7 +67,7 @@ function submit_data() {
 			}
 			
 			//var eval_q = document.forms['eval_frm'] ;
-			
+			var prolonged_labour = "";
 			if(document.getElementById('prolonged_labour_yes').checked) {
 			  // radio button is checked
 			  var prolonged_labour = "yes";
@@ -78,6 +78,7 @@ function submit_data() {
 			  var prolonged_labour = "no";
 			}
 			
+			var evacuated = "";
 			if(document.getElementById('evacuated_yes').checked) {
 			  // radio button is checked
 			  var evacuated = "yes";
@@ -92,9 +93,11 @@ function submit_data() {
 			var no_of_moves=$("#no_of_moves").val();
 			var place_of_delivery=$("#place_of_delivery").val();
 			
+			var if_institution = "";
+			
 			if(document.getElementById('if_institution_g').checked) {
 			  // radio button is checked
-			  var if_institution = "Govt";
+			  var if_institution = "Govt.";
 			}
 			
 			if(document.getElementById('if_institution_p').checked) {
@@ -106,6 +109,7 @@ function submit_data() {
 			
 			var no_of_pnc_visit=$("#no_of_pnc_visit").val();
 			
+			 var fistula_cases_identified = "";
 			if(document.getElementById('fistula_cases_identified_yes').checked) {
 			  // radio button is checked
 			  var fistula_cases_identified = "yes";
@@ -116,6 +120,7 @@ function submit_data() {
 			  var fistula_cases_identified = "no";
 			}
 			
+			var fistula_case_reffered = "";
 			if(document.getElementById('fistula_case_reffered_yes').checked) {
 			  // radio button is checked
 			  var fistula_case_reffered = "yes";
@@ -126,6 +131,7 @@ function submit_data() {
 			  var fistula_case_reffered = "no";
 			}
 			
+			var psychological = "";
 			if(document.getElementById('psychological_yes').checked) {
 			  // radio button is checked
 			  var psychological = "yes";
@@ -136,6 +142,7 @@ function submit_data() {
 			  var psychological = "no";
 			}
 			
+			var metarnal_morbidity = "";
 			if(document.getElementById('metarnal_morbidity_yes').checked) {
 			  // radio button is checked
 			  var metarnal_morbidity = "yes";
@@ -148,6 +155,7 @@ function submit_data() {
 			
 			var if_yes_problem=$("#if_yes_problem").val();
 			
+			var metarnal_death = "";
 			if(document.getElementById('metarnal_death_yes').checked) {
 			  // radio button is checked
 			  var metarnal_death = "yes";
