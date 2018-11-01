@@ -19,7 +19,7 @@
 <script type="text/javascript" src="datajs/globalvar.js"></script>
 <script type="text/javascript" src="datajs/jq.js"></script>
 <script type="text/javascript" src="datajs/leftmenu_dashboard.js"></script>
-<script type="text/javascript" src="datajs/submit_contact_mail.js"></script>
+<script type="text/javascript" src="datajs/user_menu.js"></script>
 </head>
 <body id="mobile_wrap">
 
@@ -85,36 +85,212 @@
      
      <div id="pages_maincontent">
       
-      <h2 class="page_title">Contact</h2>
+      <h2 class="page_title">Action Plan on Identification of Obstetric Fistula</h2>
+
+       
     
     <div class="page_single layout_fullwidth_padding toolbarpage">  
     
-    
-
-
-<h2 id="Note"></h2>
-            
-            
-
-
-          <div class="contactform">
+    <div class="contactform">
             <form class="cmxform" id="ContactForm" method="post" action="">
-            <label>Name:</label>
-            <input type="text" name="ContactName" id="ContactName" value="" class="form_input required" />
-            <label>Email:</label>
-            <input type="text" name="ContactEmail" id="ContactEmail" value="" class="form_input required email" />
-            <label>Message:</label>
-            <textarea name="ContactComment" id="ContactComment" class="form_textarea textarea required" rows="" cols=""></textarea>
-            <input type="button" name="submit" class="form_submit" id="insert" value="Send" onClick="sud_data()" />
-            <input class="" type="hidden" name="to"  value="youremail@yourwebsite.com" />
-            <input class="" type="hidden" name="subject" value="Contacf form message" />
+            <label>Mother's Name :</label>
+            <input type="text" name="mothers_name" id="mothers_name" value="" class="form_input required" />
+            <label>Date :</label>
+            <input type="date" name="patient_dt" id="patient_dt" value="" class="form_input required" />
+            <label><u>Pregnancy Details :-</u></label>
+            <label>Gravida :</label>
+            <div class="form_row">
+              <select name="preg_gravida" id="preg_gravida" class="form_select">
+                <option value="">--Select--</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+            </div>
+            <label>Living :</label>
+            <div class="form_row">
+              <select name="preg_living" id="preg_living" class="form_select">
+                <option value="">--Select--</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+            </div>
+            <label>Para :</label>
+            <div class="form_row">
+              <select name="preg_para" id="preg_para" class="form_select">
+                <option value="">--Select--</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+            </div>
+            <label>Abortion :</label>
+            <div class="form_row">
+              <select name="preg_abortion" id="preg_abortion" class="form_select">
+                <option value="">--Select--</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+            </div><hr>
+            <label>ANC Visit :</label>
+            <div class="form_row">
+              <select name="anc_visit" id="anc_visit" class="form_select">
+                <option value="">--Select--</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+            </div>
+            <div class="form_row">
+              <label>Prolonged Labour :</label>
+              <input type="radio" name="prolonged" value="male" checked> Yes<br>
+              <input type="radio" name="prolonged" value="female"> No 
+            </div>
+            <div class="form_row">
+              <label>Evacuated to Referral Hospital :</label>
+              <input type="radio" name="evacuated" value="male" checked> Yes<br>
+              <input type="radio" name="evacuated" value="female"> No
+            </div>
+			<div id="label_evacuated_if_yes" style="visibility:visible;">
+				<label  >Yes When Evacuated :</label>
+				<div class="form_row" >
+				  <select name="if_yes_evacuated" id="if_yes_evacuated" class="form_select">
+					<option value="">--Select--</option>
+					<option value="10-20 Hrs">10-20 Hrs</option>
+					<option value="20-24 Hrs">20-24 Hrs</option>
+					<option value="24-48 Hrs">24-48 Hrs</option>
+					<option value="48 Hrs">> 48 Hrs</option>
+				  </select>
+				</div>
+			</div>
+            <label>No. of Moves :</label>
+            <div class="form_row">
+              <select name="no_of_moves" id="no_of_moves" class="form_select">
+                <option value="">--Select--</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="More than 3">More than 3</option>
+              </select>
+              <b><u>Reference</u></b><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;0 -> Delivery at Home<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;1 -> Home -Hospital<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;2 -> Home  PHC/CHC - DHH/Hospital<br>&nbsp;&nbsp;&nbsp;&nbsp;3 -> Home - SC /PHC -CHC - hospital<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;4 -> More than 3-Home-SC/PHC-  CHC-DHH-hospital
+            </div>
+            <label>Place of Delivery :</label>
+            <div class="form_row">
+              <select name="place_of_delivery" id="place_of_delivery" class="form_select" onChange="openTB(this.value)">
+                <option value="">--Select--</option>
+                <option value="Home">Home</option>
+                <option value="Institution">Institution</option>
+              </select><br>
+			  <div id="frmDiv_place_if_yes" style="visibility:hidden;">
+				  <label>If Institution</label>
+				  <input type="radio" name="if_institution" id="if_institution_g" value="Govt.">Govt.
+				  <input type="radio" name="if_institution" id="if_institution_p" value="Private">Private<br>
+			  </div>
+            </div>
+            <label>Type of Delivery :</label>
+            <div class="form_row">
+              <select name="type_of_delivery" id="type_of_delivery" class="form_select">
+                <option value="">--Select--</option>
+                <option value="Normal">1. Normal</option>
+                <option value="Cesarean">2. Cesarean</option>
+                <option value="Instrumental">3. Instrumental</option>
+              </select>
+            </div>
+            <label>No of PNC Visit :</label>
+            <div class="form_row">
+              <select name="no_of_pnc_visit" id="no_of_pnc_visit" class="form_select">
+                <option value="">--Select--</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+            </div>
+            <div class="form_row">
+              <label>Fistula Cases Identified :</label>
+              <input type="radio" name="istula" value="male" checked> Yes<br>
+              <input type="radio" name="istula" value="female"> No 
+            </div>
+            <div class="form_row">
+              <label>Fistula Cases Referred :</label>
+              <input type="radio" name="ases" value="male" checked> Yes<br>
+              <input type="radio" name="ases" value="female"> No
+            </div>
+            <div class="form_row">
+              <label>Psychological Impaired :</label>
+              <input type="radio" name="sychological" value="male" checked> Yes<br>
+              <input type="radio" name="sychological" value="female"> No 
+            </div>
+            <div class="form_row">
+              <label>Maternal Morbidity :</label>
+              <input type="radio" name="aternal" value="male" checked> Yes<br>
+              <input type="radio" name="aternal" value="female"> No 
+            </div>
+            <div class="form_row" id="metarnal_morbidity_if_yes" style="visibility:visible;"> 
+              <label>Yes - What Problem:</label>
+                <textarea name="if_yes_problem" id="if_yes_problem" class="form_textarea" rows="" cols=""></textarea>
+              </div>
+            <div class="form_row">
+              <label>Maternal Death :</label>
+              <input type="radio" name="maternal" value="male" checked> Yes<br>
+              <input type="radio" name="maternal" value="female"> No 
+            </div>
+            <input type="button" name="submit" class="form_submit" id="submit22" value="Submit" onClick="submit_data()" />
+            <!--<input class="" type="hidden" name="to"  value="youremail@yourwebsite.com" />
+            <input class="" type="hidden" name="subject" value="Contacf form message" />-->
             <label id="loader" style="display:none;"><img src="images/loader.gif" alt="Loading..." id="LoadingGraphic" /></label>
             </form>
           </div>
 
-
-          <a href="anm-dashboard.html" class="button_full">Back</a>  
-
+  
 
 
 
@@ -125,13 +301,24 @@
 
 
 
-      
-          
-      
-      
-        
-      
-      <div class="clear"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><a href="anm-dashboard.html" class="button_full">Back</a>
+              
+              
+
+              
+
                
 
 
@@ -235,7 +422,7 @@
     <div class="popup popup-social">
     <div class="content-block">
       <h4>Stay Tuned</h4>
-      <p>Stay connected with Birth Preparedness and Complication Readiness.</p>
+      <p>Stay connected with Midwifery Led Comprehensive Care.</p>
       <ul class="social_share">
       <li><a href="#" Target="_blank" class="external"><img src="images/icons/black/twitter.png" alt="" title="" /><span>TWITTER</span></a></li>
       <li><a href="#" Target="_blank" class="external"><img src="images/icons/black/facebook.png" alt="" title="" /><span>FACEBOOK</span></a></li>
@@ -261,5 +448,10 @@
 <script type="text/javascript" src="js/email.js"></script>
 <script type="text/javascript" src="js/audio.min.js"></script>
 <script type="text/javascript" src="js/my-app.js"></script>
+
+<script type="text/javascript" src="datajs/jquery.session.js"></script>
+<script type="text/javascript" src="datajs/check_login.js"></script>
+
+<script type="text/javascript" src="datajs/add_patient.js"></script>
   </body>
 </html>

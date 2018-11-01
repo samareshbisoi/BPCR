@@ -20,7 +20,7 @@
 <script type="text/javascript" src="datajs/jq.js"></script>
 <script type="text/javascript" src="datajs/leftmenu_dashboard.js"></script>
 
-<script type="text/javascript" src="datajs/add_patient.js"></script>
+<script type="text/javascript" src="datajs/edit_patient.js"></script>
 </head>
 <body id="mobile_wrap">
 
@@ -94,10 +94,11 @@
     
     <div class="contactform">
             <form class="cmxform" id="ContactForm" method="post" action="">
+			<input type="hidden" name="patient_id" id="patient_id" value="" />
             <label>Mother's Name :</label>
             <input type="text" name="mothers_name" id="mothers_name" value="" class="form_input required" />
             <label>Date :</label>
-            <input type="date" name="patient_dt" id="patient_dt" value="" class="form_input required" />
+            <input type="text" name="patient_dt" id="patient_dt" value="" class="form_input required" />
             <label><u>Pregnancy Details :-</u></label>
             <label>Gravida :</label>
             <div class="form_row">

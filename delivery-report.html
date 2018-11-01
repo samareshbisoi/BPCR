@@ -19,6 +19,7 @@
 <script type="text/javascript" src="datajs/globalvar.js"></script>
 <script type="text/javascript" src="datajs/jq.js"></script>
 <script type="text/javascript" src="datajs/leftmenu_dashboard.js"></script>
+<script type="text/javascript" src="datajs/close_cases_data.js"></script>
 </head>
 <body id="mobile_wrap">
 
@@ -82,103 +83,22 @@
     </a>  </div>
      
      <div id="pages_maincontent">
-      <h2 class="page_title">Delivery Report</h2>
+      <h2 class="page_title">Delivery Reports</h2>
       
        
-    
     <div class="page_single layout_fullwidth_padding">  
-   
+   <img src="images/loader.gif" alt="Loading..." id="loader" />
             <div class="list-block">
-              <ul class="posts">
-                <li class="swipeout">
-                  <div class="swipeout-content item-content">
-                    <div class="post_entry">
-                        
-                        <div class="post_details">
-          <div class="post_category"><a href="#">DESIGN</a></div>       
-                        <h2><a href="blog-single.html">Design is not just what it looks like and feels like.</a></h2>
-          </div>
-                        <div class="post_swipe"><img src="images/swipe_more.png" alt="" title="" /></div>
-                    </div>
-                  </div>
-                  <div class="swipeout-actions-right">
-                    <a href="blog-single.html" class="action1"><img src="images/icons/white/message.png" alt="" title="" /></a>
-     <a href="#" class="action1 open-popup" data-popup=".popup-social"><img src="images/icons/white/like.png" alt="" title="" /></a>
-     <a href="#" class="action1 open-popup" data-popup=".popup-social"><img src="images/icons/white/contact.png" alt="" title="" /></a>
-                  </div>
-                </li>
-                <li class="swipeout">
-                  <div class="swipeout-content item-content">
-                    <div class="post_entry">
-                        
-                        <div class="post_details">
-        <div class="post_category"><a href="#">NEWS</a></div>         
-                        <h2><a href="blog-single.html">Fashion fades, only style remains the same.</a></h2>
-                        </div>
-                        <div class="post_swipe"><img src="images/swipe_more.png" alt="" title="" /></div>
-                    </div>
-                  </div>
-                  <div class="swipeout-actions-right">
-                     <a href="blog-single.html" class="action1"><img src="images/icons/white/message.png" alt="" title="" /></a>
-     <a href="#" class="action1 open-popup" data-popup=".popup-social"><img src="images/icons/white/like.png" alt="" title="" /></a>
-     <a href="#" class="action1 open-popup" data-popup=".popup-social"><img src="images/icons/white/contact.png" alt="" title="" /></a>
-                  </div>
-                </li>
-                <li class="swipeout">
-                  <div class="swipeout-content item-content">
-                    <div class="post_entry">
-                        
-                        <div class="post_details">
-       <div class="post_category"><a href="#">CODING</a></div>        
-                        <h2><a href="blog-single.html">Good design is making something memorable.</a></h2>
-                        </div>
-                        <div class="post_swipe"><img src="images/swipe_more.png" alt="" title="" /></div>
-                    </div>
-                  </div>
-                  <div class="swipeout-actions-right">
-                    <a href="blog-single.html" class="action1"><img src="images/icons/white/message.png" alt="" title="" /></a>
-     <a href="#" class="action1 open-popup" data-popup=".popup-social"><img src="images/icons/white/like.png" alt="" title="" /></a>
-     <a href="#" class="action1 open-popup" data-popup=".popup-social"><img src="images/icons/white/contact.png" alt="" title="" /></a>
-                  </div>
-                </li>
-                <li class="swipeout">
-                  <div class="swipeout-content item-content">
-                    <div class="post_entry">
-                        
-                        <div class="post_details">
-       <div class="post_category"><a href="#">DESIGN</a></div>        
-                        <h2><a href="blog-single.html">Design is not just what it looks like and feels like.</a></h2>
-                        </div>
-                        <div class="post_swipe"><img src="images/swipe_more.png" alt="" title="" /></div>
-                    </div>
-                  </div>
-                  <div class="swipeout-actions-right">
-                    <a href="blog-single.html" class="action1"><img src="images/icons/white/message.png" alt="" title="" /></a>
-     <a href="#" class="action1 open-popup" data-popup=".popup-social"><img src="images/icons/white/like.png" alt="" title="" /></a>
-     <a href="#" class="action1 open-popup" data-popup=".popup-social"><img src="images/icons/white/contact.png" alt="" title="" /></a>
-                  </div>
-                </li>
-                <li class="swipeout">
-                  <div class="swipeout-content item-content">
-                    <div class="post_entry">
-                        
-                        <div class="post_details">
-       <div class="post_category"><a href="#">UI/UX LAYOUTS</a></div>       
-                        <h2><a href="blog-single.html">Good design is making something memorable.</a></h2>
-                        </div>
-                        <div class="post_swipe"><img src="images/swipe_more.png" alt="" title="" /></div>
-                    </div>
-                  </div>
-                  <div class="swipeout-actions-right">
-                    <a href="blog-single.html" class="action1"><img src="images/icons/white/message.png" alt="" title="" /></a>
-     <a href="#" class="action1 open-popup" data-popup=".popup-social"><img src="images/icons/white/like.png" alt="" title="" /></a>
-     <a href="#" class="action1 open-popup" data-popup=".popup-social"><img src="images/icons/white/contact.png" alt="" title="" /></a>
-                  </div>
-                </li>
+              <ul class="posts" id="listview">
+                
+                
+                
+                
+                
                 
               </ul>
-              
-            <div id="loadMore">LOAD MORE</div> 
+              <input type="hidden" id="next_off" value="" />
+            <div onClick="load_more()" id="loadMore">LOAD MORE</div> 
             <div id="showLess">END</div> 
             
       
@@ -187,7 +107,7 @@
       </div>
 
    
-        <a href="anm-dashboard.html" class="button_full">Back</a>  <br> <br> <br>
+        <a href="anm-dashboard.html" class="button_full">Back</a>    <br> <br> <br>
           
           </div>
     </div>
@@ -274,7 +194,7 @@
     <div class="popup popup-social">
     <div class="content-block">
       <h4>Stay Tuned</h4>
-      <p>Stay connected with Midwifery Led Comprehensive Care.</p>
+      <p>Stay connected with Birth Preparedness and Complication Readiness.</p>
       <ul class="social_share">
       <li><a href="#" Target="_blank" class="external"><img src="images/icons/black/twitter.png" alt="" title="" /><span>TWITTER</span></a></li>
       <li><a href="#" Target="_blank" class="external"><img src="images/icons/black/facebook.png" alt="" title="" /><span>FACEBOOK</span></a></li>
@@ -300,5 +220,9 @@
 <script type="text/javascript" src="js/email.js"></script>
 <script type="text/javascript" src="js/audio.min.js"></script>
 <script type="text/javascript" src="js/my-app.js"></script>
+
+<script type="text/javascript" src="datajs/jquery.session.js"></script>
+<script type="text/javascript" src="datajs/check_login.js"></script>
+
   </body>
 </html>

@@ -18,8 +18,7 @@
 
 <script type="text/javascript" src="datajs/globalvar.js"></script>
 <script type="text/javascript" src="datajs/jq.js"></script>
-<script type="text/javascript" src="datajs/leftmenu.js"></script>
-<script type="text/javascript" src="datajs/feedback_save.js"></script>
+<script type="text/javascript" src="datajs/leftmenu_dashboard.js"></script>
 </head>
 <body id="mobile_wrap">
 
@@ -73,58 +72,84 @@
     
   <div class="navbarpages">
     <div class="navbar_left">
-      <div class="logo_text"><a href="english-home.html"><span>M</span> I <span>D</span> W <span>I</span> V <span>E</span> - <span>GUIDE</span></a></div>
+      <div class="logo_text"><a href="anm-dashboard.html"><span>M</span> I <span>D</span> W <span>I</span> V <span>E</span> - <span>GUIDE</span></a></div>
     </div>      
     <a href="#" data-panel="left" class="open-panel">
       <div class="navbar_right"><img src="images/icons/red/menu.png" alt="" title="" /></div>
     </a>
-    <a href="english-home.html" data-panel="right" class="navbgtransblue">
+    <a href="anm-dashboard.html" data-panel="right" class="navbgtransblue">
       <div class="navbar_right whitebg"><img src="images/icons/white/home.png" alt="" title="" /></div>
-    </a>  </div>
+    </a>          
+  </div>
      
      <div id="pages_maincontent">
-      <h2 class="page_title">Give Your Feedback</h2>
       
-       
+      <h2 class="page_title">Contact</h2>
     
     <div class="page_single layout_fullwidth_padding toolbarpage">  
     
     
+
+
+<h2 id="Note"></h2>
+            
+            
+
+
           <div class="contactform">
-            <label>Name :</label>
+            <form class="cmxform" id="ContactForm" method="post" action="">
+            <label>Name:</label>
             <input type="text" name="ContactName" id="ContactName" value="" class="form_input required" />
-            <label>Phone No :</label>
-            <input type="tel" name="usrtel" id="phone" value="" class="form_input required phone" />
-            <label>Your Identity :</label>
-            <div class="form_row">
-              <select name="" class="form_select" id="identity">
-                <option value="">--Select--</option>
-                <option value="Health Worker">Health Worker</option>
-                <option value="Patient">Patient</option>
-                <option value="Individual">Individual</option>
-              </select>
-            </div>
-            <label>Feedback :</label>
-            <div class="form_row">
-              <select name="" class="form_select" id="feedback_value">
-                <option value="">--Select--</option>
-                <option value="Satisfied">Satisfied</option>
-                <option value="Not Satisfied">Not Satisfied</option>
-                <option value="Average">Average</option>
-                <option value="Good">Good</option>
-                <option value="Bad">Bad</option>
-              </select>
-            </div>
-            <input type="button" name="submit" class="form_submit" id="submit" value="Submit" onClick="submit_data()" />
+            <label>Email:</label>
+            <input type="text" name="ContactEmail" id="ContactEmail" value="" class="form_input required email" />
+            <label>Message:</label>
+            <textarea name="ContactComment" id="ContactComment" class="form_textarea textarea required" rows="" cols=""></textarea>
+            <input type="submit" name="submit" class="form_submit" id="submit" value="Send" />
             <input class="" type="hidden" name="to"  value="youremail@yourwebsite.com" />
             <input class="" type="hidden" name="subject" value="Contacf form message" />
             <label id="loader" style="display:none;"><img src="images/loader.gif" alt="Loading..." id="LoadingGraphic" /></label>
             </form>
-          </div> 
+          </div>
 
-        <a href="anm-dashboard.html" class="button_full">Back</a>  
+
+          <a href="anm-dashboard.html" class="button_full">Back</a>  
+
+
+
+
+
+
+
+
+
+
+
+      
+          
+      
+      
+        
+      
+      <div class="clear"></div>
+               
+
+
+
+
+
           
           </div>
+      
+
+
+          
+         
+         
+      
+         
+   
+      
+      
     </div>
   </div>
 </div>
@@ -134,9 +159,9 @@
         <div class="toolbar">
               <div class="toolbar-inner">
               <ul class="toolbar_icons">
-              <li class="navbg1"><a href="english-feedback.html" data-panel="right" class="navbgtransblue"><img src="images/icons/white/news.png" alt="" title="" /></a></li>              
-              <li><a href="english-anm-login.html"><img src="images/icons/white/login.png" alt="" title="" /></a></li>
-              <li class="menuicon"><a href="index.html"><img src="images/icons/red/home.png" alt="" title="" /></a></li>
+              <li class="navbg1"><a href="contact.html" data-panel="right" class="navbgtransblue"><img src="images/icons/white/contact.png" alt="" title="" /></a></li>
+              <li><a href="index.html"><img src="images/icons/white/lock.png" alt="" title="" /></a></li>
+              <li class="menuicon"><a href="anm-dashboard.html"><img src="images/icons/red/home.png" alt="" title="" /></a></li>
               <li><a href="#" data-popup=".popup-social" class="open-popup"><img src="images/icons/white/facebook.png" alt="" title="" /></a></li>
               <li><a href="tel:8249 262 386" class="external"><img src="images/icons/white/phone.png" alt="" title="" /></a></li>
               </ul>
