@@ -1,7 +1,7 @@
 
-function open_divA() {
+function open_divA(val) {
 	alert("function called");
-	if(document.getElementById('evacuated_yes').checked) { alert(document.getElementById('evacuated_yes').checked);
+	if(val == 'yes') { //alert(document.getElementById('evacuated_yes').checked); document.getElementById('evacuated_yes').checked
 			$("#label_evacuated_if_yes").show();
 			  // radio button is checked
 			// document.getElementById('label_evacuated_if_yes').style.visibility = "visible";
@@ -14,9 +14,9 @@ function open_divA() {
 	
 }
 
-function open_divMM() {
+function open_divMM(val) {
 	
-	if(document.getElementById('metarnal_morbidity_yes').checked) {
+	if(val == 'yes') { //document.getElementById('metarnal_morbidity_yes').checked
 			  // radio button is checked
 			  $("#metarnal_morbidity_if_yes").show();
 			 //document.getElementById('metarnal_morbidity_if_yes').style.visibility = "visible";
