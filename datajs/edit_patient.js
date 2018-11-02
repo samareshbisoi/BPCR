@@ -1,7 +1,7 @@
 
 function open_divA() {
-	
-	if(document.getElementById('evacuated_yes').checked) { //alert(document.getElementById('evacuated_yes').checked);
+	alert("function called");
+	if(document.getElementById('evacuated_yes').checked) { alert(document.getElementById('evacuated_yes').checked);
 			$("#label_evacuated_if_yes").show();
 			  // radio button is checked
 			// document.getElementById('label_evacuated_if_yes').style.visibility = "visible";
@@ -104,7 +104,7 @@ function submit_data() {
 			
 			if(document.getElementById('if_institution_g').checked) {
 			  // radio button is checked
-			  var if_institution = "Govt";
+			  var if_institution = "Govt.";
 			}
 			
 			if(document.getElementById('if_institution_p').checked) {
@@ -291,7 +291,7 @@ function submit_data() {
 				
 				
 				/*$("#evacuated").val(field.evacuated) ;*/
-				$("#if_yes_evacuated").val(field.evacuated_yes) ;
+				$("#if_yes_evacuated").val(field.if_yes_evacuated) ;
 				
 				$("#no_of_moves").val(field.no_of_moves) ;
 				$("#place_of_delivery").val(field.place_of_delivery) ;
