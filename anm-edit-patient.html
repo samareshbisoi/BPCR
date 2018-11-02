@@ -207,7 +207,7 @@
                   <!-- Checked by default -->
                   <input type="radio"  value="yes"    name="evacuated" id="evacuated_yes">
                   <div class="item-inner">
-                    <div class="item-title" onClick="open_divA()">Yes</div>
+                    <div class="item-title" onClick="open_divA('yes')">Yes</div>
                   </div>
                 </label>
                           
@@ -215,7 +215,7 @@
                   <!-- Checked by default -->
                   <input type="radio"  value="no"   name="evacuated" id="evacuated_no">
                   <div class="item-inner">
-                    <div class="item-title" onClick="open_divA()">No</div>
+                    <div class="item-title" onClick="open_divA('no')">No</div>
                   </div>
                 </label>
               </div> 
@@ -351,17 +351,17 @@
               <div class="form_row_right">
                 <label class="label-radio item-content">
                   <!-- Checked by default -->
-                  <input type="radio" name="metarnal_morbidity" onClick="open_divMM()" id="metarnal_morbidity_yes" value="yes" >
+                  <input type="radio" name="metarnal_morbidity" id="metarnal_morbidity_yes" value="yes" >
                   <div class="item-inner">
-                    <div class="item-title">Yes</div>
+                    <div class="item-title" onClick="open_divMM('yes')">Yes</div>
                   </div>
                 </label>
                           
                 <label class="label-radio item-content">
                   <!-- Checked by default -->
-                  <input type="radio" name="metarnal_morbidity" onClick="open_divMM()" id="metarnal_morbidity_no" value="no">
+                  <input type="radio" name="metarnal_morbidity" id="metarnal_morbidity_no" value="no">
                   <div class="item-inner">
-                    <div class="item-title">No</div>
+                    <div class="item-title" onClick="open_divMM('no')">No</div>
                   </div>
                 </label>
               </div> 
