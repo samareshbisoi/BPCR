@@ -1,6 +1,6 @@
 
 function open_divA(val) {
-	alert("function called");
+	//alert("function called");
 	if(val == 'yes') { //alert(document.getElementById('evacuated_yes').checked); document.getElementById('evacuated_yes').checked
 			$("#label_evacuated_if_yes").show();
 			  // radio button is checked
